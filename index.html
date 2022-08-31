@@ -5,7 +5,180 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mt phone Hunter</title>
+        <!-- bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- font-awsome link -->
+    <script src="https://kit.fontawesome.com/00c39e9316.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
+<style>
+    .mainfeture-modal {
+        color: cadetblue;
+        font-size: large;
+        text-decoration: dashed;
+    }
+
+    .tbl-header {
+        color: hsl(0, 0%, 28%);
+        font-size: 30px;
+        font-weight: bold;
+        font-family: monospace;
+        letter-spacing: 1px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    .tbl-header {
+        padding: 64px;
+        background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 3s infinite linear;
+    }
+
+    @keyframes shine {
+        0% {
+            background-position: 0;
+        }
+
+        60% {
+            background-position: 600px;
+        }
+
+        100% {
+            background-position: 600px;
+        }
+    }
+    .bg-footer{
+        background-color: aliceblue;
+    }
+</style>
+
+<body>
+    <header>
+        <section>
+            <nav class="navbar bg-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand fw-bold " href="index.html ">Mt Phone Hunter <i
+                            class="fa-solid fa-mobile-screen-button"></i></a>
+                    <div class="d-flex">
+                        <input id="search-field" type="email" class="form-control  me-2" id="exampleFormControlInput1"
+                            placeholder="search your phone">
+                        <div id="btn-search" class="btn btn-primary">Search</div>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <div id="home" class="mx-auto text-center" style="width: 500px;">
+            <h2>Phone shop</h2>
+            <table class="table " style="width: 400px;">
+                <thead>
+                    <tr>
+                        <th class="tbl-header" scope="col"> Available Phone brand </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Apple</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Samsung</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Oppo</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">Apple watch</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </header>
+
+
+
+    <main class="container">
+        <section>
+            <div id="phones-container" class="row row-cols-1 row-cols-md-4 g-4">
+
+            </div>
+            <!-- no found div -->
+            <div id="no-found-message" class="mt-4 d-none">
+                <h3 class="text-info">No found phones, try a new search</h3>
+            </div>
+            <!-- show All div -->
+            <div id="show-all" class="text-center d-none">
+                <div id="btn-show-all" class="btn btn-primary">Show All</div>
+            </div>
+        </section>
+        <!-- loader -->
+        <section id="loader" class="d-none">
+            <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border  text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <!-- modal contents -->
+        <section>
+
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="phoneDetailModalLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phone-details" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+    </footer>
+    <footer  class="row  py-5 mt-5 border-top bg-footer ">
+        <div class="col-lg-6 ms-5">
+            <img class="align-items-center" src="images/logo2.png" alt="">
+            <h4 class="text-dark">Mt phone Hunter </h4>
+        </div>
+    
+    
+        <div class="col-lg-3 col-sm-12 text-start">
+            
+            <h5 class="fw-bold text-dark">Customer Services</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-commmon-color">Help Center</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-commmon-color">Report Abuse</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-commmon-color">Submit a Dispute</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-commmon-color">Policies & Rules</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-commmon-color">Get Paid for Your Feedback</a>
+                </li>
+            </ul>
+        </div>
+    
+        <div class="col-lg-2 col-sm-12 "> 
+            <a href="#home" class="btn btn-primary "><i class="fa fa-arrow-up margin-right "></i> To the top</a>
+        </div>
+        <div class="col col-lg-12 col-sm-12 mt-5">
+            <h5 class="text-center  ">Copyright © 2022 Mt Phone Hunter</h5>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+        <script src="js/index.js"></script>
 <body>
     
 </body>
