@@ -38,11 +38,11 @@ const displayPhone = (phones, dataLimit) => {
         // forLoop 
     // }
                 // display all data/phones array
-    phones.forEach(phone => {                                                                                              
+    phones.forEach(phone => {
         const phoneDiv = document.createElement('div');
         phoneDiv.classList.add('col');
         phoneDiv.innerHTML = `
-        <div class="card p-4 shadow-lg  hover-zoom text-center">
+        <div class="card p-4 shadow-lg  card-hover text-center">
             <img src="${phone.image}" class="card-img-top" alt="...">                                               
             <div class="card-body">
                 <h5 class="card-title">${phone.brand}</h5>

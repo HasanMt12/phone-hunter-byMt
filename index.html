@@ -53,6 +53,14 @@
     .bg-footer{
         background-color: aliceblue;
     }
+    .card-hover:hover {
+    box-shadow: 0 40px 60px -20px rgba(25, 16, 90, 0.15);
+    z-index: 100;
+    }
+    .card-hover:hover .card-title{
+    color: #4e22d0;
+    font-family: monospace;
+    }
 </style>
 
 <body>
@@ -104,8 +112,8 @@
 
             </div>
             <!-- no found div -->
-            <div id="no-found-message" class="mt-4 d-none">
-                <h3 class="text-info">No found phones, try a new search</h3>
+            <div id="no-found-message" class="mt-4 mb-4 d-none">
+                <h3 class="text-info text-center fw-bold">No found phones, try a new search</h3>
             </div>
             <!-- show All div -->
             <div id="show-all" class="text-center d-none">
@@ -172,8 +180,7 @@
         <div class="col col-lg-12 col-sm-12 mt-5">
             <h5 class="text-center  ">Copyright © 2022 Mt Phone Hunter</h5>
         </div>
-    </footer>
-
+    </footer> 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
